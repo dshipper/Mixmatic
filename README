@@ -1,1 +1,12 @@
 This is the Mixmatic Readme.
+
+Here's what we need:
+	1. Login system (users table)
+	2. Mix table:
+		- Mix id
+		- Mix author_id (user)
+		- Mix recipient_id (user)
+		- Spotify url (string)
+		- Message (body text)
+		
+		
