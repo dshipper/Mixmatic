@@ -23,7 +23,7 @@ source 'http://rubygems.org'
 #ASSET PIPELINE
 	gem 'json'
 	gem 'sass'
-	#gem 'coffee-script'
+	gem 'coffee-script'
 	gem 'uglifier'	
 
 #FRONT-END

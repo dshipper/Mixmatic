@@ -34,6 +34,10 @@ GEM
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.2.0)
     dalli (1.1.4)
     erubis (2.7.0)
     execjs (1.2.13)
@@ -134,6 +138,7 @@ PLATFORMS
 DEPENDENCIES
   annotate
   bcrypt-ruby
+  coffee-script
   dalli
   foreman
   heroku
