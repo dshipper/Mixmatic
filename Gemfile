@@ -1,42 +1,51 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.2'
+#ENVIRONMENT
+	gem 'mongrel', '>= 1.2.0.pre2'
+	gem 'rails', '3.1.2'
+	gem 'rack'
+	gem 'heroku'
+	gem 'foreman'
+	gem 'dalli'
+	gem 'kgio'
+	
+	group :production do
+	  gem 'pg'
+	end
+	
+	group :development, :test do
+	  gem 'sqlite3'
+	end
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+#ADMINISTRATION
+	gem 'sass-rails'
+	gem "meta_search",    '>= 1.1.0.pre'
+			
+#ASSET PIPELINE
+	gem 'json'
+	gem 'sass'
+	gem 'coffee-script'
+	gem 'uglifier'	
 
-gem 'sqlite3'
+#FRONT-END
+	gem 'jquery-rails', '>= 1.0.12'
 
+#CORE APPLICATION
+	#gem "nifty-generators", :group => :development
+	#gem "paperclip", "~> 2.3"  
+	#gem 'rmagick', :require => 'RMagick'
+	gem 'annotate'
+	#gem 'geokit'
+	gem 'json'  
+	#gem 'stripe'
+	#gem 'aws-s3', :require => 'aws/s3'
+	gem "bcrypt-ruby", :require => "bcrypt"
+	gem "mocha", :group => :test
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.1.5.rc.2'
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
-end
+#BACKGROUND PROCESSING
+	#gem 'resque'
+	
 
-gem 'jquery-rails'
-
-group :production do
-  # gems specifically for Heroku go here
-  gem "pg"
-end
-
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
-group :test do
-  # Pretty printed test output
-  gem 'turn', '0.8.2', :require => false
-end
+#DEBUGGING
+	#gem 'ruby-debug19', :require => 'ruby-debug'
+	
