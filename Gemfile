@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 #ENVIRONMENT
-	gem 'mongrel', '>= 1.2.0.pre2'
 	gem 'rails', '3.1.2'
 	gem 'rack'
 	gem 'heroku'
