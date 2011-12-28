@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/jeremyolliver/annotate_models.git
+  revision: 4d57e4fe6360125f17886168120a48091a268e45
+  branch: rake_compatibility
+  specs:
+    annotate (2.4.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -30,7 +37,6 @@ GEM
     activesupport (3.1.2)
       multi_json (~> 1.0)
     addressable (2.2.6)
-    annotate (2.4.0)
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
@@ -143,7 +149,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  annotate
+  annotate!
   bcrypt-ruby
   coffee-script
   dalli

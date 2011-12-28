@@ -33,7 +33,7 @@ source 'http://rubygems.org'
 	#gem "nifty-generators", :group => :development
 	#gem "paperclip", "~> 2.3"  
 	#gem 'rmagick', :require => 'RMagick'
-	gem 'annotate'
+	gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
 	#gem 'geokit'
 	gem 'json'  
 	#gem 'stripe'

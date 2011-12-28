@@ -1,5 +1,86 @@
-<h1>New mix</h1>
+<div class="container <%= controller_name %>-<%=action_name %>">
+	<br><br><br><br>
+	<div class="slogan-right">Make mixtapes for your friends</div>
+	<%= image_tag "logo.png" %>
+	<div class="column-1-new">
+		<div class="rounded pistachio-top">
+			You're just seconds away from sending your mix
+		</div>
+		<div class="rounded white">
+			<h1>1. Mix Info</h1>
+			<div class="indent">
+			<%= form_for(@mix) do |f| %>
+			  <% if @mix.errors.any? %>
+			    <div id="error_explanation">
+			      <h2><%= pluralize(@mix.errors.count, "error") %> prohibited this mix from being saved:</h2>
 
-<%= render 'form' %>
+			      <ul>
+			      <% @mix.errors.full_messages.each do |msg| %>
+			        <li><%= msg %></li>
+			      <% end %>
+			      </ul>
+			    </div>
+			  <% end %>
 
-<%= link_to 'Back', mixes_path %>
+			  <div class="field">
+			    Spotify URI<br />
+			    <%= f.text_field :spotify_url %>
+			  </div>
+			  <div class="field">
+			    Mix title<br />
+			    <%= f.text_field :name %>
+			  </div>
+			  <div class="field">
+			    Mix description<br />
+			    <%= f.text_area :message, :rows => 8 %>
+			  </div>
+			</div>
+			  
+			  
+		</div>
+		
+	</div>
+	
+	<div class="column-2-new">
+		<div class="rounded white off-top">
+			<h1>2. Recipient info </h1>
+			<div class="indent">
+				<div class="field">
+					Recipient first name
+					<%= f.text_field :recipient_name %>
+				</div>
+				<div class="field">
+					Recipient email address
+					<%= f.text_field :recipient_email %>
+				</div>
+			</div>
+			<h1> 3. Login info </h1>
+				<div class="indent">
+					<div class="field">
+						Your first name
+						<%= text_field_tag :first_name %>
+					</div>
+					<div class="field">
+						Your email address
+						<%= text_field_tag :email_address %>
+					</div>
+					<div class="field">
+						Choose a password
+						<%= password_field_tag :password %>
+					</div>
+				</div>
+		</div>
+		<div class="actions">
+		    <%= f.submit %>
+		  </div>
+		<% end %>
+		
+	</div>
+	
+	
+	
+		
+</div>
+
+
+

@@ -4,13 +4,17 @@
 
 $top-margin: 100px;
 
-body{
+@mixin half-maroon-body{
 	width: 100%;
 	height: 100%;
 	background-image: url("bg.png");
 	background-repeat: repeat-x;
 	background-color: #dfdfdf;
 	display: inline-block;
+}
+
+#pages-index{
+		@include half-maroon-body;
 }
 
 .container{

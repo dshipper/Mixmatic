@@ -1,3 +1,111 @@
 // Place all the styles related to the Mixes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin half-maroon-body{
+	width: 100%;
+	height: 100%;
+	background-image: url("bg.png");
+	background-repeat: repeat-x;
+	background-color: #dfdfdf;
+	display: inline-block;
+}
+
+#mixes-new{
+	@include half-maroon-body;
+}
+
+.mixes-new{
+	.slogan-right{
+		float: right;
+		font: 24px HNLight;
+		color: #a6b5a1;
+		margin-top: 30px;
+		font-weight: lighter;
+	}
+	
+	.column-1-new{
+		width: 430px;
+		display: inline-block;
+		vertical-align: top;
+		font: 18px HNLight;
+		
+		input[type="text"]{
+			width: 275px;
+			height: 32px;
+			border: solid 1px #bdbcbd;
+			font: 18px HNlight;
+		}
+		textarea{
+			width: 275px;
+			border: solid 1px #bdbcbd;
+			font: 18px HNLight;
+		}
+		
+		.indent{
+			margin-left: 25px;
+		}
+	}
+	
+	.column-2-new{
+		width: 230px;
+		margin-left: 40px;
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 60px;
+		
+		input[type="text"]{
+			width: 200px;
+			height: 32px;
+			border: solid 1px #bdbcbd;
+			font: 18px HNlight;
+		}
+		
+		input[type="password"]{
+			width: 200px;
+			height: 32px;
+			border: solid 1px #bdbcbd;
+			font: 18px HNlight;
+		}
+		
+		.indent{
+			margin-left: 25px;
+		}
+	}
+	
+	.rounded{
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		width: 100%;
+		padding: 15px;
+	}
+	
+	.pistachio-top{
+		background-color: #a6b5a1;
+		font: 18px HelveticaNeueMedium;
+		text-align: center;
+		border: solid 1px #9c9898;
+		position: relative;
+		z-index: 2;
+		color: #000;
+		padding-bottom: 10px;
+	}
+	
+	.white{
+		background-color: #fff;
+		border: solid 1px #d6d6d6;
+		z-index: 0;
+		position: relative;
+		bottom: 10px;
+		padding-top: 20px;
+	}
+	
+	h1{
+		font: 24px Chunk;
+		margin-top: 0px;
+	}
+	
+	.off-top{
+		padding-top: 10px;
+	}
+}
