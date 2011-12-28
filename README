@@ -13,7 +13,7 @@ TODO before launch:
 	-make a better "create mix" button
 	-add a login page
 	-add a "preview"
-	-viral buttons
+
 	
 Dealt with:
 	-change the login info thing on /mixes/new so that it's hidden if you're currently
@@ -22,6 +22,7 @@ Dealt with:
 	-make flash notices better
 	-add a mailer
 	-add mix title to the show page
+	-viral buttons
 
 
 		
