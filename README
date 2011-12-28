@@ -11,10 +11,8 @@ Here's what we need:
 		
 TODO before launch:
 	-make a better "create mix" button
-	-add a mailer
 	-add a login page
 	-add a "preview"
-	-add mix title to the show page
 	-viral buttons
 	
 Dealt with:
@@ -22,6 +20,8 @@ Dealt with:
 		logged in
 	-create a how to find URI instructions and link that shit with a lightbox
 	-make flash notices better
+	-add a mailer
+	-add mix title to the show page
 
 
 		
