@@ -14,10 +14,13 @@ TODO before launch:
 	-make a better "create mix" button
 	-add a mailer
 	-make flash notices better
-	-change the login info thing on /mixes/new so that it's hidden if you're currently
-		logged in
 	-add a login page
 	-add a "preview"
 	-add mix title to the show page
+	
+Dealt with:
+	-change the login info thing on /mixes/new so that it's hidden if you're currently
+		logged in
+
 
 		

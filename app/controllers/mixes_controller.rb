@@ -1,14 +1,14 @@
 class MixesController < ApplicationController
   # GET /mixes
   # GET /mixes.json
-  def index
-    @mixes = Mix.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @mixes }
-    end
-  end
+  # def index
+  #   @mixes = Mix.all
+  # 
+  #   respond_to do |format|
+  #     format.html # index.html.erb
+  #     format.json { render json: @mixes }
+  #   end
+  # end
 
   # GET /mixes/1
   # GET /mixes/1.json
@@ -32,10 +32,10 @@ class MixesController < ApplicationController
     end
   end
 
-  # GET /mixes/1/edit
-  def edit
-    @mix = Mix.find(params[:id])
-  end
+  # # GET /mixes/1/edit
+  # def edit
+  #   @mix = Mix.find(params[:id])
+  # end
 
   # POST /mixes
   # POST /mixes.json
@@ -79,29 +79,29 @@ class MixesController < ApplicationController
 
   # PUT /mixes/1
   # PUT /mixes/1.json
-  def update
-    @mix = Mix.find(params[:id])
-
-    respond_to do |format|
-      if @mix.update_attributes(params[:mix])
-        format.html { redirect_to @mix, notice: 'Mix was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @mix.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /mixes/1
-  # DELETE /mixes/1.json
-  def destroy
-    @mix = Mix.find(params[:id])
-    @mix.destroy
-
-    respond_to do |format|
-      format.html { redirect_to mixes_url }
-      format.json { head :ok }
-    end
-  end
+  # def update
+  #     @mix = Mix.find(params[:id])
+  # 
+  #     respond_to do |format|
+  #       if @mix.update_attributes(params[:mix])
+  #         format.html { redirect_to @mix, notice: 'Mix was successfully updated.' }
+  #         format.json { head :ok }
+  #       else
+  #         format.html { render action: "edit" }
+  #         format.json { render json: @mix.errors, status: :unprocessable_entity }
+  #       end
+  #     end
+  #   end
+  # 
+  #   # DELETE /mixes/1
+  #   # DELETE /mixes/1.json
+  #   def destroy
+  #     @mix = Mix.find(params[:id])
+  #     @mix.destroy
+  # 
+  #     respond_to do |format|
+  #       format.html { redirect_to mixes_url }
+  #       format.json { head :ok }
+  #     end
+  #   end
 end
