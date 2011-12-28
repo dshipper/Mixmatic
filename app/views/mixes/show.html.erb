@@ -15,6 +15,7 @@
 			To: <%= @mix.recipient_name %>
 		</div>
 		<div class="white-box">
+			<center><div class="mix-name"><%= @mix.name %></div></center>
 			<%= @mix.message %>
 		</div>
 		<%= link_to image_tag("play.png"), "javascript:playSong();" %>
@@ -26,4 +27,5 @@
 		<%= image_tag "cassette-small.png" %>
 		<%= link_to image_tag("logo-small.png"), "/" %>
 	</div>
+	
 </div>

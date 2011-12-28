@@ -106,6 +106,14 @@
 	}
 }
 
+.little-linky{
+	a{
+		color: #a40328;
+		text-decoration: none;
+		font-size: 12px;
+	}
+}
+
 #mixes-new{
 	@include half-maroon-body;
 }
@@ -161,5 +169,9 @@
 	.little-message{
 		font: 10px Helvetica;
 		color: #a6b5a1;
+	}
+	
+	.mix-name{
+		font: 20px HelveticaNeueMedium;
 	}
 }
