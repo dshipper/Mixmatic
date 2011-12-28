@@ -50,7 +50,7 @@ class MixesController < ApplicationController
         @mix.user_id = @user.id
         respond_to do |format|
           if @mix.save
-            format.html { redirect_to @mix, notice: 'Mix was successfully created.' }
+            format.html { redirect_to @mix, notice: 'We sent your mix! Here\'s a preview.' }
             format.json { render json: @mix, status: :created, location: @mix }
           else
             format.html { render action: "new" }
@@ -67,7 +67,7 @@ class MixesController < ApplicationController
       @mix.user_id = current_user.id
       respond_to do |format|
         if @mix.save
-          format.html { redirect_to @mix, notice: 'Mix was successfully created.' }
+          format.html { redirect_to @mix, notice: 'We sent your mix! Here\'s a preview.' }
           format.json { render json: @mix, status: :created, location: @mix }
         else
           format.html { render action: "new" }
