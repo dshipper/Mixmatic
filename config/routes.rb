@@ -1,4 +1,8 @@
 Mixmatic::Application.routes.draw do
+  resources :mixes
+
+  devise_for :users
+
   get "pages/index"
 
   get "pages/about"

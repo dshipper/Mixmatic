@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  spotify_url: MyString
+  message: MyText
+  public: false
+  password: MyString
+  name: MyString
+
+two:
+  user_id: 1
+  spotify_url: MyString
+  message: MyText
+  public: false
+  password: MyString
+  name: MyString

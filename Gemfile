@@ -40,6 +40,7 @@ source 'http://rubygems.org'
 	#gem 'aws-s3', :require => 'aws/s3'
 	gem "bcrypt-ruby", :require => "bcrypt"
 	gem "mocha", :group => :test
+	gem "devise"
 
 #BACKGROUND PROCESSING
 	#gem 'resque'

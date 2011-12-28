@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @mix.user_id %>
+</p>
+
+<p>
+  <b>Spotify url:</b>
+  <%= @mix.spotify_url %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @mix.message %>
+</p>
+
+<p>
+  <b>Public:</b>
+  <%= @mix.public %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @mix.password %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @mix.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_mix_path(@mix) %> |
+<%= link_to 'Back', mixes_path %>
