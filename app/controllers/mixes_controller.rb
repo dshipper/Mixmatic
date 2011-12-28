@@ -43,9 +43,28 @@ class MixesController < ApplicationController
     debugger
     @mix = Mix.new(params[:mix])
     
+    unless user_signed_in?
     @user = User.new(:name => params[:first_name], :email => params[:email_address], :password => params[:password])
-    if @user.save
-      @mix.user_id = @user.id
+      if @user.save
+        sign_in @user
+        @mix.user_id = @user.id
+        respond_to do |format|
+          if @mix.save
+            format.html { redirect_to @mix, notice: 'Mix was successfully created.' }
+            format.json { render json: @mix, status: :created, location: @mix }
+          else
+            format.html { render action: "new" }
+            format.json { render json: @mix.errors, status: :unprocessable_entity }
+          end
+        end
+      else
+        respond_to do |format|
+          format.html { render action: "new" }
+          format.json { render json: @mix.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      @mix.user_id = current_user.id
       respond_to do |format|
         if @mix.save
           format.html { redirect_to @mix, notice: 'Mix was successfully created.' }
@@ -54,11 +73,6 @@ class MixesController < ApplicationController
           format.html { render action: "new" }
           format.json { render json: @mix.errors, status: :unprocessable_entity }
         end
-      end
-    else
-      respond_to do |format|
-        format.html { render action: "new" }
-        format.json { render json: @mix.errors, status: :unprocessable_entity }
       end
     end
   end

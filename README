@@ -9,4 +9,15 @@ Here's what we need:
 		- Spotify url (string)
 		- Message (body text)
 		
+TODO before launch:
+	-create a how to find URI instructions and link that shit with a lightbox
+	-make a better "create mix" button
+	-add a mailer
+	-make flash notices better
+	-change the login info thing on /mixes/new so that it's hidden if you're currently
+		logged in
+	-add a login page
+	-add a "preview"
+	-add mix title to the show page
+
 		

@@ -54,6 +54,7 @@
 					<%= f.text_field :recipient_email %>
 				</div>
 			</div>
+			<% unless user_signed_in? %>
 			<h1> 3. Login info </h1>
 				<div class="indent">
 					<div class="field">
@@ -69,6 +70,7 @@
 						<%= password_field_tag :password %>
 					</div>
 				</div>
+			<% end %>
 		</div>
 		<div class="actions">
 		    <%= f.submit %>
