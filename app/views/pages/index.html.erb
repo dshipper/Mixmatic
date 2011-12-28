@@ -1,8 +1,8 @@
 <div class="container">
-	<div class="column-1-new">
+	<div class="column-1">
 		<%= image_tag "cassette.png", :class => "cassette" %>
 	</div>
-	<div class="column-2-new">
+	<div class="column-2">
 		<%= image_tag "logo.png", :class => "logo" %>
 		<div class="subhead">
 			Make mixtapes for your friends.
@@ -17,7 +17,7 @@
 
 			We’ll deliver your mix for you with style.
 		</div>
-		<%= image_tag "send.png", :class => "send" %>
+		<%= link_to image_tag("send.png", :class => "send"), new_mix_path %>
 	</div>
 	<%= render "shared/footer" %>
 </div>
