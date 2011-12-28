@@ -5,7 +5,7 @@ class UserMailer < ActionMailer::Base
      @name = sender_name
      @person = recipient_name    
      @link = link     
-     subject = @name + " created you a mixtape with Mixmatic"
+     subject = @name + " created a mixtape for you with Mixmatic"
      mail(:to => email, 
           :subject => subject)  
    end
