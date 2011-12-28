@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body style="line-height: 24px;">                                                              
+	 <table  align="center"  cellspacing="0" style="font-family: Helvetica;" width="700">
+	           <tr bgcolor="#693b3e">
+				<td style="width: 100px;">
+		       	<img style="padding: 10px;" src="http://www.mixmatic.co/assets/logo-small-8d769a108e8b04e64325aa092511e340.png">
+				</td>
+				<td>
+				</td>              
+				</tr>
+	            <td> 
+				<tr>
+				<td width="700">
+				<h1><%= @name %> has shared a mixtape with you! </h1></td>
+				<td>
+				</tr>
+				<tr>
+					<td>
+				<p>
+			      Your friend <%= @name %> created a mixtape just for you! 
+				</p>
+				<p>
+				  Click <%= link_to "here", @link %> to view their message and play the playlist using Spotify. 
+				  </p>
+				  <p>They created the mixtape using 
+				  Mixmatic - which is a fun new way to create and share mixtapes with your friends.
+				</p>
+				<p>Thanks for listening :)</p>
+				</td>	   
+				</tr>
+			
+    </table>
+    
+  </body>
+</html>

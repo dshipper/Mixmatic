@@ -52,6 +52,7 @@ class MixesController < ApplicationController
           if @mix.save
             format.html { redirect_to @mix, notice: 'We sent your mix! Here\'s a preview.' }
             format.json { render json: @mix, status: :created, location: @mix }
+            UserMailer.you_got_mix(@user.name, @mix.recipient_name, "http://www.mixmatic.co/mixes/"+@mix.id, @mix.recipient_email).deliver
           else
             format.html { render action: "new" }
             format.json { render json: @mix.errors, status: :unprocessable_entity }
@@ -69,6 +70,7 @@ class MixesController < ApplicationController
         if @mix.save
           format.html { redirect_to @mix, notice: 'We sent your mix! Here\'s a preview.' }
           format.json { render json: @mix, status: :created, location: @mix }
+          UserMailer.you_got_mix(@user.name, @mix.recipient_name, "http://www.mixmatic.co/mixes/"+@mix.id, @mix.recipient_email).deliver
         else
           format.html { render action: "new" }
           format.json { render json: @mix.errors, status: :unprocessable_entity }
