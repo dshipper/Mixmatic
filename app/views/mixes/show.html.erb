@@ -1,35 +1,29 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>User:</b>
-  <%= @mix.user_id %>
-</p>
-
-<p>
-  <b>Spotify url:</b>
-  <%= @mix.spotify_url %>
-</p>
-
-<p>
-  <b>Message:</b>
-  <%= @mix.message %>
-</p>
-
-<p>
-  <b>Public:</b>
-  <%= @mix.public %>
-</p>
-
-<p>
-  <b>Password:</b>
-  <%= @mix.password %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @mix.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_mix_path(@mix) %> |
-<%= link_to 'Back', mixes_path %>
+<script type="text/javascript">
+	function playSong(){
+		var song_url = "<%= @mix.spotify_url %>";
+		document.location = song_url;
+	}
+</script>
+<div class="container">
+	<p id="notice"><%= notice %></p>
+	<br><br><br><br>
+	<div class="column-1-get">
+		<div class="float-right from-to">
+			From: <%= @mix.user.name %>
+		</div>
+		<div class="from-to">
+			To: <%= @mix.recipient_name %>
+		</div>
+		<div class="white-box">
+			<%= @mix.message %>
+		</div>
+		<%= link_to image_tag("play.png"), "javascript:playSong();" %>
+		<div class="float-right little-message">
+			You'll need to have Spotify for this to work :)
+		</div>
+	</div>
+	<div class="column-2-get">
+		<%= image_tag "cassette-small.png" %>
+		<%= link_to image_tag("logo-small.png"), "/" %>
+	</div>
+</div>

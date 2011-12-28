@@ -1,6 +1,6 @@
 class Mix < ActiveRecord::Base
   belongs_to :user
-  attr_accessible :user, :spotify_url, :message, :public, :password, :name, :created_at, :recipient_name, :recipient_email
+  attr_accessible :user, :spotify_url, :message, :public, :password, :name, :created_at, :recipient_name, :recipient_email, :user_id
 end
 
 # == Schema Information

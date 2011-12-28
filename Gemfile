@@ -47,5 +47,5 @@ source 'http://rubygems.org'
 	
 
 #DEBUGGING
-	#gem 'ruby-debug19', :require => 'ruby-debug'
+	gem 'ruby-debug19', :require => 'ruby-debug'
 	

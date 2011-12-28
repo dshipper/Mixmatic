@@ -40,13 +40,23 @@ class MixesController < ApplicationController
   # POST /mixes
   # POST /mixes.json
   def create
+    debugger
     @mix = Mix.new(params[:mix])
-
-    respond_to do |format|
-      if @mix.save
-        format.html { redirect_to @mix, notice: 'Mix was successfully created.' }
-        format.json { render json: @mix, status: :created, location: @mix }
-      else
+    
+    @user = User.new(:name => params[:first_name], :email => params[:email_address], :password => params[:password])
+    if @user.save
+      @mix.user_id = @user.id
+      respond_to do |format|
+        if @mix.save
+          format.html { redirect_to @mix, notice: 'Mix was successfully created.' }
+          format.json { render json: @mix, status: :created, location: @mix }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @mix.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
         format.html { render action: "new" }
         format.json { render json: @mix.errors, status: :unprocessable_entity }
       end

@@ -11,14 +11,10 @@
 	display: inline-block;
 }
 
-#mixes-new{
-	@include half-maroon-body;
-}
-
-.mixes-new{
+@mixin mix-page {
 	.slogan-right{
 		float: right;
-		font: 24px HNLight;
+		font: 22px HNLight;
 		color: #a6b5a1;
 		margin-top: 30px;
 		font-weight: lighter;
@@ -52,7 +48,7 @@
 		margin-left: 40px;
 		display: inline-block;
 		vertical-align: top;
-		margin-top: 60px;
+		margin-top: 10px;
 		
 		input[type="text"]{
 			width: 200px;
@@ -107,5 +103,63 @@
 	
 	.off-top{
 		padding-top: 10px;
+	}
+}
+
+#mixes-new{
+	@include half-maroon-body;
+}
+
+.mixes-new {
+	@include mix-page;
+}
+.mixes-index {
+	@include mix-page;
+}
+
+#mixes-show{
+	width: 100%;
+	height: 100%;
+	background-image: url("bg-big.png");
+	background-repeat: repeat-x;
+	background-color: #6e3e41;
+	text-align: top;
+	
+	.column-1-get{
+		width: 435px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	.column-2-get{
+		width: 270px;
+		display: inline-block;
+		text-align: center;
+		vertical-align: top;
+		margin-left: 10px;
+	}
+	
+	.from-to{
+		font: 18px HelveticaNeueMedium;
+		color: #fff;
+	}
+	
+	.float-right{
+		float: right;
+	}
+	
+	.white-box{
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		background-color: #fff;
+		border: solid 1px #d6d6d6;
+		padding: 20px;
+		font: 18px HNLight;
+		margin-bottom: 10px;
+	}
+	
+	.little-message{
+		font: 10px Helvetica;
+		color: #a6b5a1;
 	}
 }
